@@ -1,0 +1,221 @@
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: Comfortaa;
+    color: black;
+    text-decoration: none;
+}
+body{
+    
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F0F2;
+}
+
+.header{
+    margin: 0 auto;
+    width: 100%;
+    height: 839px;
+    background: url('../imges/UVIYOrIo8oGeh207JgXMFWGbR_keEUTZKWzT23EJjDHOw0yP9bLxPgB4ws8kDk1sC7TEQfLgnKSxgq6tFlmfm_Q2fV53DEdl7oc8f5ahDbWgmhM4yiDl_KmvsGy2Drr2GKSOmFIjIR_0GdF5xRm8qn_B0kbAgarAgqXOiDa7acwichsJAgvxln817L03RtwVwJoT61zBcosd3mKNBwzpdPgHv5ihYTG4l8mi-vMrbbj-8WMEIPBYEMNn7.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__container{
+        margin: 0 auto;
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f7f829;
+        &_logo{
+            display: flex;
+            align-items: center;
+            margin-left: 60px;
+            height: 60px;
+            width: 190px;
+            & a{
+                margin-left: 10px;
+                font-size: 25px;
+                font-weight: 900;
+                color: white;
+            }
+        }
+        &_navbar{
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            & .hamburger_menu{
+                height: 40px;
+                display: none;
+                & .hamburger__modal{
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100vw; /* полная ширина */
+                    height: 100vh; /* полная высота */
+                    background-color: rgba(0,0,0,0.4); /* цвет фона - прозрачный черный */
+                    &-content{
+                        background-color: #fff;
+                        /* окно будет находится по центру по горизонтали и с отступом сверху в 100 px */
+                        margin: 0 auto; 
+                        padding: 20px;
+                        width: 50%; 
+                        font-size: 20px;
+                        /* разнесем текст и кнопоку по краям окна */
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+            & .hamburger{
+                width: 30px;
+                height: 3px;
+                margin: 5px;
+            }
+            & ul{
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                & li a{
+                    color: white;
+                    text-decoration: none;
+                    padding: 1rem;
+                    font-family: Comfortaa;
+                }
+            }
+        }
+    }
+    &__intro{
+        position: relative;
+        right: 5%;
+        top: 35%;
+        width: 348px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        font-size: Comfortaa ;
+        float: right;
+        margin: 0 auto;
+        padding: 100px;
+        & .intro{
+            color: white;
+            font-size: 64px;
+        }
+        &  .pov-intro{
+            color: #ffffff;
+            font-size: 36px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .header{
+        width: 100%;
+        height:100%;
+        margin-top: 90px;
+        position: relative; /* Позволяет дочерним элементам позиционироваться относительно него */
+        height: 250px; /* Высота header */
+        background: url('../imges/UVIYOrIo8oGeh207JgXMFWGbR_keEUTZKWzT23EJjDHOw0yP9bLxPgB4ws8kDk1sC7TEQfLgnKSxgq6tFlmfm_Q2fV53DEdl7oc8f5ahDbWgmhM4yiDl_KmvsGy2Drr2GKSOmFIjIR_0GdF5xRm8qn_B0kbAgarAgqXOiDa7acwichsJAgvxln817L03RtwVwJoT61zBcosd3mKNBwzpdPgHv5ihYTG4l8mi-vMrbbj-8WMEIPBYEMNn7.webp');
+        background-size: cover; /* или другое значение */
+        background-position: top; /* измените позицию, если нужно */
+        background-repeat: no-repeat; /* или другое значение */
+        &__container{
+            width: 100%;
+            position: absolute; /* Позволяет разместить контейнер поверх header */
+            top: -90px; /* Отступ сверху */
+            z-index: 1; /* Устанавливаем выше фона */
+            background-color: #F0F0F2;
+            &_logo a{
+                color: black;
+            }
+            &_navbar{
+                & .hamburger-menu{
+                    & .open{
+                        position: fixed;
+                        left: 28.2%;
+                        float: right;
+                        width: 72%;
+                        background-color:#000000c5;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        & .close{
+                            position: absolute;
+                            top: 20px;
+                            float: right;
+                            right: 8px;
+                        }
+                        & ul{
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            top: 80px;
+                            gap: 20px;
+                            & .button{
+                                color: white;
+                                text-align: center;
+                            }
+                            & .button-contact{
+                                text-align: center;
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        &__intro{
+            position: relative;
+            top: 60%;
+            right: 0;
+            width:40%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+            margin-top:0;
+            gap: 10px;
+            float: right;
+            & .intro{
+                font-size: 150%;
+                color: white;
+            }& .pov-intro{
+                font-size: 85%;
+            }
+            & a{
+                width: 33px;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }& img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .header__container_logo{
+        margin-left: 10px;
+    }
+    .header__container_navbar .hamburger_menu {
+        display: block;
+    }
+ 
+    .header__container_navbar .nav_links {
+        display: none;
+    }
+}
