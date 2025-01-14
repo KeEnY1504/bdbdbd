@@ -12,7 +12,7 @@
         height: 476px;
         background-color: #ffffff;
         border: 5px solid #BF9424;
-
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -29,12 +29,14 @@
         &_intro{
             width: 90%;
             height: 325px;
-            margin-top: 40px;
+            margin: 20px 0;
+            padding: 34px 9px;
             border: 5px solid #10110ca4;
             & p{
                 color: black;
-                font-size: 32px;
-                padding: 34px 9px;
+                font-size: 28px;
+
+                text-align: center;
             }
             & span{
                 color: #BF9424;
@@ -78,7 +80,7 @@
                 }& .box_intro{
                     width: 342px;
                     height: 198px;
-                    font-size: 19px;
+                    font-size: 17px;
                     text-align:justify ;
                 }
             }

@@ -1,44 +1,44 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/pageHome/HomePage';
 import AttractionsPage from './pages/AttractionsPage/AttractionsPage';
 import AttractionDetailPage from './pages/AttractionDetailes/AttractionDetailPage';
-import HeaderTop from './components/header/header';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 
-// const Router = () => {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <HeaderTop />
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/attractions/:id" element={<AttractionDetailPage />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// };
+const AppRouter = () => {
+  return (
 
-// export default Router
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path='/attractions' element={<AttractionsPage />} />
+        <Route path="/attractions/:id" element={<AttractionDetailPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+  );
+};
+
+export default AppRouter
 
 
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    path: '/attractions',
-    element: <AttractionsPage />,
-  },
-  {
-    path: '/attractions/:id',
-    element: <AttractionDetailPage />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <HomePage />,
+//   },
+//   {
+//     path: '/attractions',
+//     element: <AttractionsPage />,
+//   },
+//   {
+//     path: '/attractions/:id',
+//     element: <AttractionDetailPage />,
+//   },
+// ]);
 
-export default function Routes() {
-  return <RouterProvider router={router} />;
-}
+// export default function AppRoutes() {
+//   return <RouterProvider router={router} />;
+// }
 
 
 

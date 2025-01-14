@@ -3,9 +3,6 @@ import styles from './HomePage.module.scss';
 import factOne from '../../assets/imges/box1.svg';
 import factTwo from '../../assets/imges/box2.svg';
 import factThree from '../../assets/imges/box3.svg';
-import { Link } from 'react-router-dom'; // Импортируем Link
-import AttractionsPage from '../AttractionsPage/AttractionsPage';
-
 
 export default function HomePage() {
     return (
@@ -41,7 +38,6 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-            <Link to={AttractionsPage}>dddd</Link>
         </section>
     );
 }

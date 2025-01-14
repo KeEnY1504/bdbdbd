@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './header.module.scss';
 import logo from '../../assets/imges/maps_2953336.png';
 import burger from '../../assets/imges/Icon.svg';
+import Arrow from '../../assets/imges/Arrow left.svg';
 
 import { Link } from 'react-router-dom'; // Импортируем Link
 import Routes from '../../Routes';
@@ -32,6 +33,11 @@ export default function HeaderTop() {
                         <li><Link to={'/contacts'}>Контакты</Link></li>
                     </ul>
                 </div>
+            </div>
+            <div className={styles.header__intro}>
+                <p className={styles.intro}>Дербент</p>
+                <p className={styles.pov_intro}>что и где?</p>
+                <a href="#blocks" ><img src={Arrow} alt="" /></a>
             </div>
         </header>
     );
